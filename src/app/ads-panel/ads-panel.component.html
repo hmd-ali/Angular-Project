@@ -1,0 +1,15 @@
+<div class="container">
+    <div class="card m-2" *ngFor="let ad of ads">
+        <div class="card-body">
+            <h5 class="card-title">
+                {{ ad.title }}
+            </h5>
+            <p class="card-text">
+                {{ ad.body }}
+            </p>
+            <a *ngIf="ad.link" [href]="ad.link.url">
+                {{ ad.link.text }}
+            </a>
+        </div>
+    </div>
+</div>
